@@ -1,9 +1,7 @@
 """This script is a modification of the input_dat.py file in the TensorFlow MNIST tutorial. The original script is available at https://github.com/tensorflow/tensorflow.git
 
-
-
-
-"""
+Raw DICOM images were obtained from the Parkinson’s Progression Markers Initiative (PPMI) database (www.ppmi-info.org/data). For up-to-date information on the study, visit www.ppmi-info.org. PPMI is an observational clinical study that collects imaging, biologic sampling, clinical, and behavioral assessments to characterize Parkinson's disease progression.  Further details about inclusion and exclusion criteria are available at http://www.ppmi-info.org/wp-content/uploads/2014/01/PPMI-AM7-Protocol.pdf
+The dataset retrieved on February 16, 2016 contained 1513 preprocessed volumetric DaTscan SPECT images. Each DaTscan contains 91 slices and each slice contains 91 x 109 pixels encoded with 16-bit greyscale. A single slice at the level of the basal ganglia containing the most intense radiotracer activity was selected for input. The 1513 axial images were randomized and split into three parts: 1189 images for the training set, 108 images for the validation set, and 216 images for the test set. """
 
 """Functions for downloading and reading MNIST data."""
 from __future__ import absolute_import
@@ -17,7 +15,7 @@ import numpy
 import string
 import dicom
 from six.moves import urllib
-from six.moves import xrange  # pylint: disable=redefined-builtin
+from six.moves import xrange
 import tensorflow as tf
 import png
 import getopt, sys
